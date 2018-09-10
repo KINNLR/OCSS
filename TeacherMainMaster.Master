@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TeacherMainMaster.Master.cs" Inherits="CSsystem.TeacherMain" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="UTF-8">
+		<title>选课中心</title>
+		<link rel="stylesheet" href="css/studentmain.css" />
+         
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+      <form id="form1" runat="server">
+    <div class="header">
+			<div class="header logo">
+				<a id="headera">
+					<img src="img/logo.png" />
+				
+				<span id="logopara" > 学生选课系统</span>
+</a>
+			</div>
+
+		</div>
+    <div class="navitems">
+			<ul >
+                <li>
+					<a href="TeacherMainPage.aspx" >主页</a>
+				</li>
+				<li>
+					<a href="TeacherInfo.aspx" >个人信息查询</a>
+				</li>
+				<li>
+					<a href="TeacherCourse.aspx">任课查询</a>
+				</li>
+				<li>
+					<a href="TeacherPass.aspx">修改登录密码</a>
+				</li>
+				<li>
+					<a href="TeacherGrade.aspx">学生成绩录入</a>
+				</li>
+                <li>
+                   
+        
+        
+         <asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click">退出</asp:LinkButton>
+   
+   
+                   
+					<%-- <a href="Login.aspx" >退出</a>--%>
+				</li>
+			</ul>
+		</div>
+    <div class="maincontent" style="margin:20px auto;width:1000px;height:400px">
+      
+        
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+   
+        
+        </asp:ContentPlaceHolder>
+    
+    </form>
+    </div>
+
+        <div class="bottom">
+			<p id="bottomp"> ©2018-2019 KINN. All rights reserved</p>
+		</div>
+</body>
+</html>
